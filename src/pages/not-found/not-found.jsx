@@ -1,8 +1,7 @@
 function NotFoundPage() {
     return (
-        <>
-            cvxgxcvgb
-        </>
+        <main>
+        </main>
     );
 }
 

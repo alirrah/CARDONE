@@ -1,0 +1,68 @@
+main.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  block-size: 100vh;
+
+  background-color: hsl(210, 20%, 98%);
+
+  img {
+    block-size: 14rem;
+  }
+
+  div.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    inline-size: min(90%, 30rem);
+
+    background-color: hsl(0, 0%, 100%);
+
+    padding: 1.2rem;
+
+    border-radius: 1.2rem;
+    border: 0.1rem solid hsl(210, 8%, 90%);
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      inline-size: 100%;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+      }
+
+      label {
+        color: hsl(230, 9%, 60%);
+      }
+
+      input {
+        display: flex;
+        align-items: center;
+
+        background-color: hsla(230, 9%, 60%, 0.05);
+
+        border-radius: 1.2rem;
+
+        padding: 0.8rem 1.6rem;
+
+        &[type='submit'] {
+          background-color: hsl(202, 98%, 51%);
+
+          color: hsl(0, 0%, 100%);
+        }
+      }
+    }
+  }
+}

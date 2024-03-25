@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input {
+  border: 0.1rem solid transparent;
+  outline: 0;
+
+  &:focus-visible {
+    border: 0.1rem solid hsl(210, 8%, 90%);
+  }
+}
