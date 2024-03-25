@@ -24,7 +24,7 @@ main.login {
     padding: 1.2rem;
 
     border-radius: 1.2rem;
-    border: 0.1rem solid $grey;
+    border: 0.1rem solid $light-grey;
 
     h3 {
       font-size: 1.8rem;
@@ -42,13 +42,13 @@ main.login {
       }
 
       label {
-        color: $light-grey;
+        color: $grey;
       }
 
       input {
         @include flex($align: center);
 
-        background-color: $dark-grey;
+        background-color: $grey-alpha;
 
         border-radius: 1.2rem;
 

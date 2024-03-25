@@ -1,3 +1,5 @@
+@use 'styles/variables' as *;
+
 @font-face {
   font-family: 'RaviBold';
   src: url('assets/font/RaviBold.eot');
@@ -22,6 +24,6 @@ input {
   outline: 0;
 
   &:focus-visible {
-    border: 0.1rem solid hsl(210, 8%, 90%);
+    border: 0.1rem solid $light-grey;
   }
 }
