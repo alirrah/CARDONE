@@ -24,6 +24,6 @@ input {
   outline: 0;
 
   &:focus-visible {
-    border: 0.1rem solid $light-grey;
+    border-color: $light-grey;
   }
 }
