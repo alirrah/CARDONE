@@ -9,6 +9,8 @@ main.login {
 
   background-color: hsl(210, 20%, 98%);
 
+  font-family: RaviBold, serif;
+
   img {
     block-size: 14rem;
   }
@@ -29,12 +31,18 @@ main.login {
     border-radius: 1.2rem;
     border: 0.1rem solid hsl(210, 8%, 90%);
 
+    h3 {
+      font-size: 1.8rem;
+    }
+
     form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
 
       inline-size: 100%;
+
+      font-size: 1.2rem;
 
       div {
         display: flex;
@@ -57,10 +65,13 @@ main.login {
 
         padding: 0.8rem 1.6rem;
 
+        font-family: RaviBold, serif;
+
         &[type='submit'] {
           background-color: hsl(202, 98%, 51%);
 
           color: hsl(0, 0%, 100%);
+          font-family: RaviBold, serif;
         }
       }
     }

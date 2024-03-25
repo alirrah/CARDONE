@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'RaviBold';
+  src: url('assets/font/RaviBold.eot');
+  src: url('assets/font/RaviBold.eot?#iefix') format('embedded-opentype'),
+  url('assets/font/RaviBold.woff') format('woff'),
+  url('assets/font/RaviBold.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
 

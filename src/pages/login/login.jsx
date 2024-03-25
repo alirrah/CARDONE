@@ -1,26 +1,32 @@
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import './login.scss';
+import {useRef} from "react";
 
 function LoginPage() {
 
     const navigate = useNavigate();
+    const submitRef = useRef(null);
 
-    const handleSubmit = (event)=> {
+    const handleSubmit = (event) => {
         event.preventDefault();
+        submitRef.current.disabled = true;
 
         let form = event.target;
 
         let username = form.username.value;
         let password = form.password.value;
 
-        console.log({"Username" : username, "Password" : password});
+        console.log({"Username": username, "Password": password});
 
-        navigate('/dashboard');
+        setTimeout(() => {
+            submitRef.current.disabled = false;
+            navigate('/dashboard');
+        }, 2000);
     }
 
     return (
         <main className='login'>
-            <img src="src/assets/image/logo.webp" alt="cardone logo" />
+            <img src="src/assets/image/logo.webp" alt="cardone logo"/>
 
             <div className='box'>
                 <h3>ورود به حساب کاربری</h3>
@@ -36,7 +42,7 @@ function LoginPage() {
                         <input type='password' id='password'/>
                     </div>
 
-                    <input type='submit' value='ورود'/>
+                    <input type='submit' value='ورود' ref={submitRef}/>
                 </form>
             </div>
         </main>
