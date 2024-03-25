@@ -1,0 +1,67 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+main.login {
+  @include flex($direction: column, $justify: center, $align: center, $gap: 3rem);
+
+  block-size: 100vh;
+
+  background-color: $milky;
+
+  font-family: $font-bold;
+
+  img {
+    block-size: 14rem;
+  }
+
+  div.box {
+    @include flex($direction: column, $justify: center, $align: center, $gap: 1.2rem);
+
+    inline-size: min(90%, 30rem);
+
+    background-color: $white;
+
+    padding: 1.2rem;
+
+    border-radius: 1.2rem;
+    border: 0.1rem solid $light-grey;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    form {
+      @include flex($direction: column, $gap: 1rem);
+
+      inline-size: 100%;
+
+      font-size: 1.2rem;
+
+      div {
+        @include flex($direction: column, $gap: 0.8rem);
+      }
+
+      label {
+        color: $grey;
+      }
+
+      input {
+        @include flex($align: center);
+
+        background-color: $grey-alpha;
+
+        border-radius: 1.2rem;
+
+        padding: 0.8rem 1.6rem;
+
+        font-family: $font-bold;
+
+        &[type='submit'] {
+          background-color: $blue;
+
+          color: $white;
+        }
+      }
+    }
+  }
+}
