@@ -41,11 +41,11 @@ jobs:
       - name: Download Build
         uses: actions/download-artifact@v1
         with:
-          name: deploy_dist
+          name: dist
 
       - name: Deploy to github page
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ SECRETS.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: deploy_dist
+          FOLDER: dist
