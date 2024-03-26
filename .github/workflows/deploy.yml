@@ -42,7 +42,7 @@ jobs:
       - name: Download Build
         uses: actions/download-artifact@v1
         with:
-          name: dist
+          name: deploy_dist
 
       - name: Deploy to github page
         uses: JamesIves/github-pages-deploy-action@releases/v3
