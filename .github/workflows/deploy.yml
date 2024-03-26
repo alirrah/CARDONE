@@ -25,10 +25,11 @@ jobs:
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
+        if: success()
+        uses: actions/upload-artifact@v1
         with:
-          name: production-files
-          path: ./dist
+          name: deploy_dist
+          path: dist/CARDONE/browser
 
   deploy:
     name: Deploy
