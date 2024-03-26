@@ -3,7 +3,6 @@ name: Deploy
 on:
   push:
     branches:
-      - main
 
 jobs:
   build:
@@ -17,7 +16,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: '18.13'
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
