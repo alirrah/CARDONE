@@ -1,30 +1,25 @@
+@use './../../../../styles/mixin' as *;
+@use './../../../../styles/variables' as *;
+
 button.chat-item {
-  display: flex;
-  gap: 1rem;
+  @include flex($gap: 1rem);
 
   padding: 1rem;
 
-  cursor: pointer;
-
-  border: 0;
-  outline: 0;
   background-color: transparent;
 
-  border-bottom: 0.1rem solid hsla(230, 9%, 60%, 0.1);
-
-  font-family: RaviBold, serif;
+  border-bottom: 0.1rem solid $grey-alpha-one;
+  border-right: 0.3rem solid transparent !important;
 
   font-size: 1.2rem;
 
-  border-right: 0.3rem solid transparent!important;
+  &.active {
+    background-color: $blue-alpha;
 
-  &.active{
-    background-color: hsla(216, 100%, 40%, 0.05);
-
-    border-right:0.3rem solid hsla(202, 98%, 51%, 1)!important;
+    border-right-color: $blue !important;
   }
 
-  &:last-child{
+  &:last-child {
     border: 0;
   }
 
@@ -32,7 +27,7 @@ button.chat-item {
     min-inline-size: 4rem;
     block-size: 4rem;
 
-    background-image: linear-gradient(180deg, hsl(227, 77%, 27%), hsl(228.7, 73.3%, 38.2%));
+    background-image: linear-gradient(180deg, $dark-blue, $blue);
 
     border-radius: 1.2rem;
 
@@ -44,67 +39,63 @@ button.chat-item {
       inline-size: 0.6rem;
       block-size: 0.6rem;
 
+      background-color: $red;
+
       border-radius: 50%;
 
-      border: 0.1rem solid white;
+      border: 0.1rem solid $full-white;
 
       position: absolute;
       inset-inline-end: 0;
       inset-block-end: 0;
 
-      background-color: hsl(0, 56%, 46%);
     }
 
-    &.online:after{
-      background-color: hsl(155, 54%, 45%);
+    &.online:after {
+      background-color: $green;
     }
 
   }
 
-  div{
-    display: flex;
-    flex-direction: column;
+  div.chat-info {
+    @include flex($direction: column, $gap: 1.2rem);
 
-    &.time {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+    div.time {
+      @include flex($align: center, $justify: space-between);
 
-      color: hsla(230, 9%, 60%, 1);
+      color: $grey;
     }
 
-    &.title {
-      flex-direction: row;
-      align-items: center;
-      gap: 0.5rem;
+    div.title {
+      @include flex($align: center, $gap: 0.5rem);
 
       b {
-        color: hsla(230, 9%, 60%, 1);
+        color: $grey;
         font-size: 1.4rem;
 
         &.unread {
-          color: black;
+          color: $black;
         }
       }
 
       p {
-        background-color: hsl(228.7, 73.3%, 38.2%);
+        background-color: $blue;
 
         padding: 0.2rem 0.4rem;
 
-        color: white;
-
         border-radius: 0.4rem;
+
+        color: $full-white;
       }
     }
-  }
 
-  p.subtitle {
-    text-align: justify;
+    p.subtitle {
+      block-size: 4.2rem;
 
-    block-size: 5.6rem;
+      color: $grey;
+      text-align: justify;
 
-    overflow: hidden;
+      overflow: hidden;
+    }
   }
 }

@@ -1,6 +1,6 @@
 import "./chat-item.scss";
 
-function ChatItem(props) {
+const ChatItem = (props) => {
     const clickHandling = () => {
         props.changeID(props.data.id);
     }
@@ -9,7 +9,7 @@ function ChatItem(props) {
         <button className={`chat-item ${props.data.id === props.activeID ? 'active' : ''}`} onClick={clickHandling}>
             <div className={`profile ${props.data.online ? "online" : "offline"}`}></div>
 
-            <div>
+            <div className='chat-info'>
                 <div>
                     <div className='time'>
                         <p>از {props.data.form}</p>
@@ -18,7 +18,10 @@ function ChatItem(props) {
                     </div>
 
                     <div className='title'>
-                        <b className={props.data.unread !== 0 ? 'unread' : ''}>{props.data.title}</b>
+                        <b className={props.data.unread !== 0 ? 'unread' : ''}>
+                            {props.data.title}
+                        </b>
+
                         {props.data.unread !== 0 && <p>{props.data.unread}</p>}
                     </div>
                 </div>

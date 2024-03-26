@@ -1,30 +1,46 @@
+@use "./../../../../styles/mixin" as *;
+@use './../../../../styles/variables' as *;
+
 div.chat-text {
   flex: 7;
 
-  background-color: hsl(207, 53%, 96%);
+  background-color: $blue-alpha;
 
   border-radius: 1.6rem;
 
   &.empty {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex($align: center, $justify: center);
 
     div{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 1rem;
+      @include flex($direction: column, $align: center, $justify: center, $gap: 2rem);
 
       img {
-        inline-size: 32rem;
+        inline-size: 20rem;
       }
 
       p {
         font-size: 2.2rem;
 
-        &:last-child {
+        &.subtitle{
+          font-size: 1.2rem;
+        }
+      }
+
+      div {
+        @include flex($gap: 1rem);
+
+        &.text {
+          @include flex($direction: column, $align: center, $justify: center, $gap: 0.4rem);
+        }
+
+        a {
+          background-color: $blue;
+
+          padding: 0.4rem 0.8rem;
+
+          border-radius: 0.4rem;
+
+          color: $full-white;
           font-size: 1.2rem;
         }
       }
