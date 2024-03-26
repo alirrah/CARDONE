@@ -1,0 +1,15 @@
+div.chat-history {
+  block-size: calc(100vh - 22rem);
+  overflow-y: auto;
+
+  div.date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+
+    border-bottom: 0.1rem solid hsla(230, 9%, 60%, 0.1);
+
+    font-size: 1.2rem;
+  }
+}

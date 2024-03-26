@@ -1,0 +1,74 @@
+div.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: hsl(0, 0%, 100%);
+
+  border-radius: 0 0 3.2rem 3.2rem;
+
+  padding: 1rem 0;
+
+  div.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    inline-size: min(90%, 102.4rem);
+
+    img {
+      block-size: 6rem;
+    }
+
+    div {
+      display: flex;
+      gap: 0.8rem;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        inline-size: 4rem;
+        block-size: 4rem;
+
+        background-color: hsl(0, 0%, 97%);
+
+        border-radius: 1rem;
+        border: 0;
+        outline: 0;
+
+        cursor: pointer;
+
+        &.blue {
+          background-image: linear-gradient(180deg, hsl(227, 77%, 27%), hsl(228.7, 73.3%, 38.2%));
+        }
+
+        svg {
+          font-size: 1.8rem;
+        }
+      }
+
+      form {
+        display: flex;
+
+        input {
+          border: 0;
+          outline: 0;
+
+          background-color: hsl(0, 0%, 97%);
+
+          border-radius: 0 1rem 1rem 0;
+
+          padding: 0.4rem 1.2rem;
+
+          font-family: RaviBold, serif;
+        }
+
+        button {
+          border-radius: 1rem 0 0 1rem;
+        }
+      }
+    }
+  }
+}

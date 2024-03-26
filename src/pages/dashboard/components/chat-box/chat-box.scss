@@ -1,0 +1,48 @@
+section.chat-box {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+
+  font-family: RaviBold, serif;
+
+  padding-bottom: 2rem;
+
+  div.container {
+    display: flex;
+    gap: 1rem;
+
+    inline-size: min(90%, 102.4rem);
+
+    background-color: hsl(0, 0%, 100%);
+
+    border-radius: 2.6rem;
+
+    padding: 2rem 0 2rem 2rem;
+
+    div.sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 3;
+
+      form {
+        padding: 0 1rem 0;
+
+        select {
+          inline-size: 100%;
+
+          padding: 1.2rem;
+
+          border-radius: 0.8rem;
+
+          background-color: hsla(230, 9%, 60%, 0.05);
+
+          border: 0;
+          outline: 0;
+
+          font-family: RaviBold, serif;
+        }
+      }
+    }
+  }
+}

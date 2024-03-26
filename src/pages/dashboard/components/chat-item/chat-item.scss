@@ -1,0 +1,110 @@
+button.chat-item {
+  display: flex;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  cursor: pointer;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+
+  border-bottom: 0.1rem solid hsla(230, 9%, 60%, 0.1);
+
+  font-family: RaviBold, serif;
+
+  font-size: 1.2rem;
+
+  border-right: 0.3rem solid transparent!important;
+
+  &.active{
+    background-color: hsla(216, 100%, 40%, 0.05);
+
+    border-right:0.3rem solid hsla(202, 98%, 51%, 1)!important;
+  }
+
+  &:last-child{
+    border: 0;
+  }
+
+  div.profile {
+    min-inline-size: 4rem;
+    block-size: 4rem;
+
+    background-image: linear-gradient(180deg, hsl(227, 77%, 27%), hsl(228.7, 73.3%, 38.2%));
+
+    border-radius: 1.2rem;
+
+    position: relative;
+
+    &:after {
+      content: "";
+
+      inline-size: 0.6rem;
+      block-size: 0.6rem;
+
+      border-radius: 50%;
+
+      border: 0.1rem solid white;
+
+      position: absolute;
+      inset-inline-end: 0;
+      inset-block-end: 0;
+
+      background-color: hsl(0, 56%, 46%);
+    }
+
+    &.online:after{
+      background-color: hsl(155, 54%, 45%);
+    }
+
+  }
+
+  div{
+    display: flex;
+    flex-direction: column;
+
+    &.time {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      color: hsla(230, 9%, 60%, 1);
+    }
+
+    &.title {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+
+      b {
+        color: hsla(230, 9%, 60%, 1);
+        font-size: 1.4rem;
+
+        &.unread {
+          color: black;
+        }
+      }
+
+      p {
+        background-color: hsl(228.7, 73.3%, 38.2%);
+
+        padding: 0.2rem 0.4rem;
+
+        color: white;
+
+        border-radius: 0.4rem;
+      }
+    }
+  }
+
+  p.subtitle {
+    text-align: justify;
+
+    block-size: 5.6rem;
+
+    overflow: hidden;
+  }
+}

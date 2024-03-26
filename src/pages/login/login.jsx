@@ -1,6 +1,6 @@
-import {useNavigate} from "react-router-dom";
-import './login.scss';
+import {Link, useNavigate} from "react-router-dom";
 import {useRef} from "react";
+import './login.scss';
 
 function LoginPage() {
 
@@ -17,6 +17,8 @@ function LoginPage() {
         let password = form.password.value;
 
         console.log({"Username": username, "Password": password});
+        localStorage.setItem('token', '12345678');
+        //TODO: request back, get token, and save in localStorage
 
         setTimeout(() => {
             submitRef.current.disabled = false;
@@ -26,20 +28,24 @@ function LoginPage() {
 
     return (
         <main className='login'>
-            <img src="src/assets/image/logo.webp" alt="cardone logo"/>
+            <Link to='/'>
+                <img src="src/assets/image/logo.webp" alt="cardone logo"/>
+            </Link>
 
             <div className='box'>
                 <h3>ورود به حساب کاربری</h3>
 
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor='username'>نام کابری</label>
-                        <input type='text' id='username' required/>
-                    </div>
+                        <div>
+                            <label htmlFor='username'>نام کابری</label>
+                            <input type='text' id='username' required/>
+                        </div>
 
-                    <div>
-                        <label htmlFor='password'>رمز عبور</label>
-                        <input type='password' id='password'/>
+                        <div>
+                            <label htmlFor='password'>رمز عبور</label>
+                            <input type='password' id='password' required/>
+                        </div>
                     </div>
 
                     <input type='submit' value='ورود' ref={submitRef}/>

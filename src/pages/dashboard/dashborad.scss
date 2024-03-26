@@ -1,0 +1,9 @@
+main.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  block-size: 100vh;
+
+  background-color: hsl(0, 0%, 96%);
+}
