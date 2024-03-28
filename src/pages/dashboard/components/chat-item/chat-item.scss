@@ -65,6 +65,10 @@ button.chat-item {
     display: flex;
     flex-direction: column;
 
+    &.chat-info {
+      gap: 1.2rem;
+    }
+
     &.time {
       display: flex;
       flex-direction: row;
@@ -103,8 +107,10 @@ button.chat-item {
   p.subtitle {
     text-align: justify;
 
-    block-size: 5.6rem;
+    block-size: 4.2rem;
 
     overflow: hidden;
+
+    color: hsla(230, 9%, 60%, 1);
   }
 }

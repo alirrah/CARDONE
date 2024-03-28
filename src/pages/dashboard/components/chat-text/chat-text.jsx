@@ -7,7 +7,7 @@ function ChatText() {
         <div className={`chat-text ${!chat_list.isEmpty && "empty"}`}>
             {!chat_list.isEmpty ?
                 <div>
-                    <img src="src/assets/image/empty-chat.webp" alt="empty chat"/>
+                    <img src="src/assets/image/black&white-logo.webp" alt="empty chat"/>
 
                     <p>پیامی وجود ندارد</p>
 

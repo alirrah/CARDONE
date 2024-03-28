@@ -9,7 +9,7 @@ function ChatItem(props) {
         <button className={`chat-item ${props.data.id === props.activeID ? 'active' : ''}`} onClick={clickHandling}>
             <div className={`profile ${props.data.online ? "online" : "offline"}`}></div>
 
-            <div>
+            <div className='chat-info'>
                 <div>
                     <div className='time'>
                         <p>از {props.data.form}</p>
