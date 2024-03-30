@@ -19,6 +19,10 @@ html {
   font-size: 62.5%;
 }
 
+h1, h2, h3, h4, h5, h6, p, a, button, input {
+  font-family: $font-bold;
+}
+
 input {
   border: 0.1rem solid transparent;
   outline: 0;
@@ -26,4 +30,18 @@ input {
   &:focus-visible {
     border-color: $light-grey;
   }
+}
+
+button {
+  border: 0;
+
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
