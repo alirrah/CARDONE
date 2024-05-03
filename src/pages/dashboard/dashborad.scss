@@ -1,9 +1,10 @@
+@use "./../../styles/mixin" as *;
+@use "./../../styles/variables" as *;
+
 main.dashboard {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  @include flex($direction: column, $gap: 1.2rem);
 
   block-size: 100vh;
 
-  background-color: hsl(0, 0%, 96%);
+  background-color: $white;
 }

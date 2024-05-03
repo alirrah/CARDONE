@@ -1,18 +1,37 @@
+import chatData from "../../../../assets/fake-data/chat-data.jsx";
 import ChatList from "../chat-list/chat-list.jsx";
+import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 import './chat-text.scss';
 
-function ChatText() {
-    const chat_list = [];
+const ChatText = () => {
+    const [chatList, setChatList] = useState([]);
+
+    useEffect(() => {
+        setChatList(chatData);
+    }, []);
+
     return (
-        <div className={`chat-text ${!chat_list.isEmpty && "empty"}`}>
-            {!chat_list.isEmpty ?
+        <div className={`chat-text ${chatList.length === 0 && "empty"}`}>
+            {chatList.length === 0 ?
                 <div>
                     <img src="src/assets/image/black&white-logo.webp" alt="empty chat"/>
 
-                    <p>پیامی وجود ندارد</p>
+                    <div className='text'>
+                        <p>پیامی وجود ندارد</p>
 
-                    <p>برای نمایش پیام ها روی یکی از چت های سمت راست کلیک کنید</p>
-                </div> : <ChatList/>}
+                        <p className='subtitle'>برای نمایش پیام ها روی یکی از چت های سمت راست کلیک کنید</p>
+                    </div>
+
+                    <div>
+                        <Link to='/create-lead'>افزودن راهنما</Link>
+
+                        <Link to='/create-car'>افزودن ماشین</Link>
+
+                        <Link to='/create-customer'>افزدون مشتری</Link>
+                    </div>
+                </div> : <ChatList/>
+            }
         </div>
     );
 }

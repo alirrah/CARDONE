@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-function LandingPage() {
+const LandingPage = () => {
     return (
         <Link to='/login'>ورود به برنامه</Link>
     );

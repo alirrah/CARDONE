@@ -1,10 +1,17 @@
 //color
-$white: hsl(0, 0%, 100%);
+$full-white: hsl(0, 0%, 100%);
+$white: hsl(0, 0%, 96%);
 $milky: hsl(210, 20%, 98%);
 $light-grey: hsl(210, 8%, 90%);
 $grey: hsl(230, 9%, 60%);
-$grey-alpha: hsla(230, 9%, 60%, 0.05);
+$grey-alpha-one: hsla(230, 9%, 60%, 0.1);
+$grey-alpha-half: hsla(230, 9%, 60%, 0.05);
+$black: hsl(0, 0%, 0%);
 $blue: hsl(228.7, 73.3%, 38.2%);
+$blue-alpha: hsla(216, 100%, 40%, 0.05);
+$dark-blue: hsl(227, 77%, 27%);
+$red: hsl(0, 56%, 46%);
+$green: hsl(155, 54%, 45%);
 
 //font
 $font-bold: RaviBold, serif;

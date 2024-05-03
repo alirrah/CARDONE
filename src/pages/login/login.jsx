@@ -3,12 +3,12 @@ import {Link, useNavigate} from "react-router-dom";
 import {useRef, useState} from "react";
 import './login.scss';
 
-function LoginPage() {
+const LoginPage = () => {
 
-    const navigate = useNavigate();
     const submitRef = useRef(null);
     const [showPassword, setShowPassword] = useState(false);
     const [showLoading, setShowLoading] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();

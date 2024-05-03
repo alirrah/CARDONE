@@ -1,12 +1,8 @@
-import {Search, GearFill, BellFill} from "react-bootstrap-icons";
+import {Robot, CarFront, PersonAdd} from "react-bootstrap-icons";
 import {Link} from "react-router-dom";
 import "./top-bar.scss";
 
-function TopBar() {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-    }
-
+const TopBar = () => {
     return (
         <div className='top-bar'>
             <div className='container'>
@@ -15,17 +11,17 @@ function TopBar() {
                 </Link>
 
                 <div>
-                    <form onSubmit={handleSubmit}>
-                        <input type='text' placeholder='جستجو...'/>
+                    <Link to='/create-lead'>
+                        <Robot/>
+                    </Link>
 
-                        <button type='submit'><Search/></button>
-                    </form>
+                    <Link to='/create-car'>
+                        <CarFront/>
+                    </Link>
 
-                    <button><GearFill/></button>
-
-                    <button><BellFill/></button>
-
-                    <button className='blue'></button>
+                    <Link to='/create-customer'>
+                        <PersonAdd />
+                    </Link>
                 </div>
             </div>
         </div>
