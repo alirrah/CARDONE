@@ -3,6 +3,7 @@ import ChatList from "../chat-list/chat-list.jsx";
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import './chat-text.scss';
+import URL from "../../../../assets/fake-data/url.jsx";
 
 const ChatText = () => {
     const [chatList, setChatList] = useState([]);
@@ -24,11 +25,11 @@ const ChatText = () => {
                     </div>
 
                     <div>
-                        <Link to='/create-lead'>افزودن راهنما</Link>
+                        <Link to={`${URL}/create-lead`}>افزودن راهنما</Link>
 
-                        <Link to='/create-car'>افزودن ماشین</Link>
+                        <Link to={`${URL}/create-car`}>افزودن ماشین</Link>
 
-                        <Link to='/create-customer'>افزدون مشتری</Link>
+                        <Link to={`${URL}/create-customer`}>افزدون مشتری</Link>
                     </div>
                 </div> : <ChatList/>
             }

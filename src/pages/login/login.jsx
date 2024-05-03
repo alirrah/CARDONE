@@ -2,6 +2,7 @@ import {EyeFill, EyeSlashFill, ArrowRepeat} from "react-bootstrap-icons";
 import {Link, useNavigate} from "react-router-dom";
 import {useRef, useState} from "react";
 import './login.scss';
+import Url from "../../assets/fake-data/url.jsx";
 
 const LoginPage = () => {
 
@@ -28,7 +29,7 @@ const LoginPage = () => {
             submitRef.current.disabled = false;
             setShowLoading(false);
 
-            navigate('/dashboard');
+            navigate(`${Url}/dashboard`);
         }, 2000);
     }
 
@@ -40,7 +41,7 @@ const LoginPage = () => {
 
     return (
         <main className='login'>
-            <Link to='/'>
+            <Link to={`${Url}/`} >
                 <img src="src/assets/image/logo.webp" alt="cardone logo"/>
             </Link>
 

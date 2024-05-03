@@ -1,8 +1,9 @@
 import {Link} from "react-router-dom";
+import Url from "../../assets/fake-data/url.jsx";
 
 const LandingPage = () => {
     return (
-        <Link to='/login'>ورود به برنامه</Link>
+        <Link to={`${Url}/login`} >ورود به برنامه</Link>
     );
 }
 

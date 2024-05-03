@@ -3,6 +3,7 @@ import ChatBox from "./components/chat-box/chat-box.jsx";
 import {useNavigate} from "react-router-dom";
 import {useEffect} from "react";
 import './dashborad.scss';
+import URL from "../../assets/fake-data/url.jsx";
 
 const DashboardPage = () => {
 
@@ -12,7 +13,7 @@ const DashboardPage = () => {
         let token = localStorage.getItem('token') ?? '';
 
         if (token === '') {
-            navigate('/');
+            navigate(`${URL}/login`);
         } else {
             //TODO: check is correct or not
         }
