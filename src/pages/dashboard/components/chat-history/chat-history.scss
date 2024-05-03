@@ -1,14 +1,17 @@
+@use './../../../../styles/mixin' as *;
+@use './../../../../styles/variables' as * ;
+
 div.chat-history {
   block-size: calc(100vh - 22rem);
+
   overflow-y: auto;
 
   div.date{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex($align: center, $justify: center);
+
     padding: 0.8rem;
 
-    border-bottom: 0.1rem solid hsla(230, 9%, 60%, 0.1);
+    border-bottom: 0.1rem solid $grey-alpha-one;
 
     font-size: 1.2rem;
   }

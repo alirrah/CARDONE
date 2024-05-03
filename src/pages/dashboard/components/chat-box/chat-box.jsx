@@ -2,7 +2,7 @@ import ChatHistory from "../chat-history/chat-history.jsx";
 import ChatText from "../chat-text/chat-text.jsx";
 import "./chat-box.scss";
 
-function ChatBox() {
+const ChatBox = () => {
     return (
         <section className='chat-box'>
             <div className='container'>

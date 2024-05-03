@@ -8,8 +8,6 @@ main.login {
 
   background-color: $milky;
 
-  font-family: $font-bold;
-
   img {
     block-size: 14rem;
   }
@@ -39,6 +37,29 @@ main.login {
 
       div {
         @include flex($direction: column, $gap: 0.8rem);
+
+        &.password-box {
+          @include flex();
+
+          position: relative;
+
+          button {
+            @include flex($align: center);
+
+            block-size: 100%;
+
+            background-color: transparent;
+
+            font-size: 1.8rem;
+            color: $grey;
+
+            position: absolute;
+            inset-block-start: 50%;
+            inset-inline-end: 0;
+
+            transform: translate(50%, -50%);
+          }
+        }
       }
 
       label {
@@ -48,20 +69,41 @@ main.login {
       input {
         @include flex($align: center, $justify: center);
 
-        background-color: $grey-alpha;
+        inline-size: 100%;
+
+        background-color: $grey-alpha-one;
 
         border-radius: 1.2rem;
 
         padding: 0.8rem 1.6rem;
+      }
 
-        font-family: $font-bold;
+      button[type='submit'] {
+        @include flex($align: center, $justify: center, $gap: 1rem);
 
-        &[type='submit'] {
-          background-color: $blue;
+        inline-size: 100%;
 
-          color: $white;
+        background-color: $blue;
+
+        border: 0;
+        border-radius: 1.2rem;
+
+        padding: 0.8rem 1.6rem;
+
+        color: $white;
+
+        svg {
+          font-size: 1.8rem;
+
+          animation: spin 2s linear infinite;
         }
       }
     }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

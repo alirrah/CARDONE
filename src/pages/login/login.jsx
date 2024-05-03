@@ -1,18 +1,22 @@
+import {EyeFill, EyeSlashFill, ArrowRepeat} from "react-bootstrap-icons";
 import {Link, useNavigate} from "react-router-dom";
-import {useRef} from "react";
+import {useRef, useState} from "react";
 import './login.scss';
 
-function LoginPage() {
+const LoginPage = () => {
 
-    const navigate = useNavigate();
     const submitRef = useRef(null);
+    const [showPassword, setShowPassword] = useState(false);
+    const [showLoading, setShowLoading] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
         submitRef.current.disabled = true;
+        setShowLoading(true);
 
         let form = event.target;
-
         let username = form.username.value;
         let password = form.password.value;
 
@@ -22,8 +26,16 @@ function LoginPage() {
 
         setTimeout(() => {
             submitRef.current.disabled = false;
+            setShowLoading(false);
+
             navigate('/dashboard');
         }, 2000);
+    }
+
+    const changePasswordType = (event) => {
+        event.preventDefault();
+
+        setShowPassword(!showPassword);
     }
 
     return (
@@ -39,16 +51,24 @@ function LoginPage() {
                     <div>
                         <div>
                             <label htmlFor='username'>نام کابری</label>
-                            <input type='text' id='username' required/>
+
+                            <input type='text' id='username' name='username' required/>
                         </div>
 
                         <div>
                             <label htmlFor='password'>رمز عبور</label>
-                            <input type='password' id='password' required/>
+
+                            <div className='password-box'>
+                                <input type={showPassword ? 'text' : 'password'} id='password' name='password' required/>
+
+                                <button onClick={changePasswordType}>
+                                    {showPassword ? <EyeFill/> : <EyeSlashFill/>}
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <input type='submit' value='ورود' ref={submitRef}/>
+                    <button type='submit' ref={submitRef}>ورود {showLoading && <ArrowRepeat/>}</button>
                 </form>
             </div>
         </main>

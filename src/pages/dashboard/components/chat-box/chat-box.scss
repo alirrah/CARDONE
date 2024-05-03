@@ -1,46 +1,41 @@
-section.chat-box {
-  display: flex;
-  justify-content: center;
-  flex: 1;
+@use './../../../../styles/mixin' as *;
+@use './../../../../styles/variables' as *;
 
-  font-family: RaviBold, serif;
+section.chat-box {
+  @include flex($justify: center);
+  flex: 1;
 
   padding-bottom: 2rem;
 
   div.container {
-    display: flex;
-    gap: 1rem;
+    @include flex($gap: 1rem);
 
-    inline-size: min(90%, 102.4rem);
+    inline-size: 90%;
 
-    background-color: hsl(0, 0%, 100%);
+    background-color: $full-white;
 
     border-radius: 2.6rem;
 
-    padding: 2rem 0 2rem 2rem;
+    padding: 2rem;
+    padding-inline-start: 0;
 
     div.sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      @include flex($direction: column, $gap: 1rem);
       flex: 3;
 
       form {
-        padding: 0 1rem 0;
+        padding: 0 1rem;
 
         select {
           inline-size: 100%;
 
+          background-color: $grey-alpha-half;
+
           padding: 1.2rem;
-
-          border-radius: 0.8rem;
-
-          background-color: hsla(230, 9%, 60%, 0.05);
 
           border: 0;
           outline: 0;
-
-          font-family: RaviBold, serif;
+          border-radius: 0.8rem;
         }
       }
     }

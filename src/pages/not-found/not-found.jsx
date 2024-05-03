@@ -1,6 +1,7 @@
-function NotFoundPage() {
+const NotFoundPage = () => {
     return (
         <>
+            Not Found
         </>
     );
 }

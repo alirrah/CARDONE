@@ -1,4 +1,4 @@
-function ChatList() {
+const ChatList = () => {
     return(
         <>
         </>
