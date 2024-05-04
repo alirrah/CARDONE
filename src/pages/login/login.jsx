@@ -1,8 +1,9 @@
-import {EyeFill, EyeSlashFill, ArrowRepeat} from "react-bootstrap-icons";
 import {Link, useNavigate} from "react-router-dom";
 import {useRef, useState} from "react";
-import './login.scss';
+import {EyeFill, EyeSlashFill, ArrowRepeat} from "react-bootstrap-icons";
 import Url from "../../assets/fake-data/url.jsx";
+import Image from "../../assets/image/logo.webp";
+import './login.scss';
 
 const LoginPage = () => {
 
@@ -42,7 +43,7 @@ const LoginPage = () => {
     return (
         <main className='login'>
             <Link to={`${Url}/`} >
-                <img src="src/assets/image/logo.webp" alt="cardone logo"/>
+                <img src={Image} alt="cardone logo"/>
             </Link>
 
             <div className='box'>

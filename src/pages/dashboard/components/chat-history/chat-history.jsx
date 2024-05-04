@@ -1,6 +1,6 @@
-import historyData from "../../../../assets/fake-data/history-data.jsx";
-import ChatItem from "../chat-item/chat-item.jsx";
 import {useEffect, useState} from "react";
+import ChatItem from "../chat-item/chat-item.jsx";
+import historyData from "../../../../assets/fake-data/history-data.jsx";
 import "./chat-history.scss";
 
 const ChatHistory = () => {

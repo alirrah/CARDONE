@@ -1,9 +1,9 @@
-import TopBar from "./components/top-bar/top-bar.jsx";
-import ChatBox from "./components/chat-box/chat-box.jsx";
 import {useNavigate} from "react-router-dom";
 import {useEffect} from "react";
+import TopBar from "./components/top-bar/top-bar.jsx";
+import ChatBox from "./components/chat-box/chat-box.jsx";
+import Url from "../../assets/fake-data/url.jsx";
 import './dashborad.scss';
-import URL from "../../assets/fake-data/url.jsx";
 
 const DashboardPage = () => {
 
@@ -13,7 +13,7 @@ const DashboardPage = () => {
         let token = localStorage.getItem('token') ?? '';
 
         if (token === '') {
-            navigate(`${URL}/login`);
+            navigate(`${Url}/login`);
         } else {
             //TODO: check is correct or not
         }
