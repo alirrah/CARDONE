@@ -1,0 +1,12 @@
+@use "./../../styles/mixin" as *;
+
+section.landing-page {
+  //@include flex($direction: column, $gap: 5rem);
+  background-color: #F5F7FE;
+
+  main{
+    &> div {
+      background-color: #1E1E1E;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@use './../../../styles/mixin' as *;
+
+header {
+  @include flex($align: center, $justify: center);
+
+  .container {
+    @include flex($align: center, $justify: space-between);
+    inline-size: min(102.4rem, 95%);
+
+    padding-block-start: 2.4rem;
+
+    div {
+      @include flex($align: center, $gap: 1.6rem);
+
+      img {
+        inline-size: 3.2rem;
+        block-size: 3.2rem;
+      }
+
+      p {
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+      }
+    }
+
+    ul {
+      @include flex($gap: 4.8rem);
+
+      li a {
+        @include flex($align: center, $justify: center, $gap: 0.2rem);
+
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+
+          background-image: linear-gradient(to top, #0D0A19, #1C39BB);
+          filter: blur(8rem);
+        }
+
+        p {
+          color: white;
+          font-size: 1.6rem;
+        }
+
+        svg {
+          block-size: 1.6rem;
+          inline-size: 1.6rem;
+
+          fill: white;
+        }
+
+        ul {
+          @include flex($direction: column, $gap: 0.8rem);
+
+          padding: 1.2rem 2.4rem;
+
+          background-color: #1E1E1E;
+
+          border-radius: 0.8rem;
+
+          position: absolute;
+          inset-block-start: 3rem;
+
+          border: 0.1rem solid white;
+
+          display: none;
+
+          transition: 0.25s linear;
+
+          li a{
+            color: white;
+            font-size: 1.6rem;
+          }
+
+        }
+
+        &:hover ul{
+          display: flex;
+        }
+      }
+    }
+
+    .login-btn {
+      @include flex($align: center, $justify: center, $gap: 0.8rem);
+
+      padding: 1.2rem 2.4rem;
+
+      border: 0.1rem solid white;
+      border-radius: 11rem;
+
+      p {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: white;
+
+      }
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+}

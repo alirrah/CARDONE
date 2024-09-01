@@ -1,0 +1,43 @@
+@use "./../../../styles/mixin" as *;
+
+section.reservation {
+  @include flex($direction: column, $justify: center, $align: center, $gap: 2rem);
+  background-color: white;
+  padding: 5rem;
+
+  h3 {
+    font-size: 3.2rem;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: #364152;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  div {
+    @include flex($align: center, $justify: center, $gap: 3.2rem);
+
+    a {
+      font-size: 1.4rem;
+      color: #364152;
+      padding: 1.1rem 2.2rem;
+      border-radius: 3.2rem;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 1.2rem;
+      }
+
+      &:first-child {
+        border: 0.1rem solid #364152;
+      }
+    }
+  }
+}

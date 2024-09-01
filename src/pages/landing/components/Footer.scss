@@ -1,0 +1,35 @@
+@use "./../../../styles/mixin" as *;
+
+footer {
+  background-color: #0D0A19;
+  color: white;
+  @include flex($align: center, $justify: center);
+  padding: 5rem 0;
+  border-radius: 2rem 2rem 0 0;
+
+  div.container {
+    inline-size: min(95%, 102.4rem);
+
+    @include flex($direction: column, $gap: 1.6rem);
+
+    h3 {
+      font-size: 2.3rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+    }
+  }
+}

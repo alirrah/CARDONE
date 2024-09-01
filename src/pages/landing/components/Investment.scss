@@ -1,0 +1,90 @@
+@use "./../../../styles/mixin" as *;
+@use './../../../styles/variables' as *;
+
+section.investment {
+  @include flex($direction: column, $align: center);
+  padding: 5rem 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media only screen and (max-width: 600px) {
+    background-image: none!important;
+  }
+
+  div.container {
+    @include flex($direction: column, $align: center, $gap: 2rem);
+    inline-size: min(95%, 102.4rem);
+
+    @media only screen and (max-width: 600px) {
+      align-items: flex-start;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: bold;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    p {
+      &.title {
+        font-size: 2.4rem;
+        font-weight: bold;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      &.end-text {
+        font-size: 1.6rem;
+      }
+    }
+
+    & > div {
+      @include flex($justify: center, $gap: 4rem);
+
+      @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        inline-size: 100%;
+        gap: 2.4rem;
+      }
+
+      div {
+        @include flex($direction: column, $align: center, $justify: center, $gap: 1rem);
+        border-radius: 0.8rem;
+        block-size: 40rem;
+        padding: 0 3rem;
+
+        @media only screen and (max-width: 600px) {
+          block-size: 20rem;
+        }
+
+        svg {
+          inline-size: 4.8rem;
+          block-size: 4.8rem;
+          fill: white;
+        }
+
+        p {
+          &.card-tittle {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+          }
+
+          &.card-sub-tittle {
+            font-family: $cunia;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,16 +8,19 @@ import Investment from "./components/Investment.jsx";
 import Reservation from "./components/Reservation.jsx";
 import DemoRequest from "./components/DemoRequest.jsx";
 import Footer from "./components/Footer.jsx";
+import "./landing.scss";
 
 const LandingPage = () => {
     return (
-        <>
-            <Header/>
-
+        <section className='landing-page'>
             <main>
-                <Banner/>
+                <div>
+                    {/*<Header/>*/}
 
-                <CooperationBrand/>
+                    <Banner/>
+
+                    <CooperationBrand/>
+                </div>
 
                 <OurAdvantages/>
 
@@ -33,7 +36,7 @@ const LandingPage = () => {
             </main>
 
             <Footer/>
-        </>
+        </section>
     );
 }
 
