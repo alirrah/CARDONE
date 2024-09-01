@@ -16,6 +16,30 @@ section.demo {
     padding-left: 100%; /* فاصله اولیه از سمت چپ */
     white-space: nowrap;
 
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%); /* شروع از سمت راست */
+      }
+      50% {
+        transform: translateX(5%); /* حرکت کامل به سمت چپ */
+      }
+      100%{
+        transform: translateX(0%); /* شروع از سمت راست */
+      }
+    }
+    @keyframes reverse-marquee {
+       0% {
+         transform: translateX(5%); /* شروع از سمت راست */
+       }
+       50% {
+         transform: translateX(0%); /* حرکت کامل به سمت چپ */
+       }
+       100%{
+         transform: translateX(5%); /* شروع از سمت راست */
+       }
+     }
+
     pre {
       font-family: $cunia;
     }
@@ -23,12 +47,14 @@ section.demo {
 
     &:nth-child(odd) {
       color: #6E7CAF;
+      animation: marquee 10s linear infinite;
     }
 
     &:nth-child(even) {
       color: #f5f7fe;
       text-shadow: -0.1rem 0 #6E7CAF, 0 0.1rem #6E7CAF, 0.1rem 0 #6E7CAF, 0 -0.1rem #6E7CAF;
       transform: translateX(10rem);
+      animation: reverse-marquee 10s linear infinite;
     }
 
   }
