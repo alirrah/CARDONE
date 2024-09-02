@@ -26,11 +26,12 @@ section.reservation {
   div {
     @include flex($align: center, $justify: center, $gap: 3.2rem);
 
-    a {
+    a, button {
       font-size: 1.4rem;
       color: #364152;
       padding: 1.1rem 2.2rem;
       border-radius: 3.2rem;
+      background-color: transparent;
 
       @media only screen and (max-width: 600px) {
         font-size: 1.2rem;

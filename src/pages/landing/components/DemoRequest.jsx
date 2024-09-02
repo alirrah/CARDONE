@@ -3,7 +3,7 @@ import "./DemoRequest.scss";
 
 
 
-const DemoRequest = () => {
+const DemoRequest = ({refrance}) => {
 
     const text = "CARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\tCARDONE\t";
     return (
@@ -12,7 +12,7 @@ const DemoRequest = () => {
                 {[...Array(8)].map((_,i) => <p key={i} className='back-text'> <pre>{text}</pre></p>)}
             </div>
 
-            <div className='card'>
+            <div className='card' ref={refrance}>
                 <img src={CardoneLogo} alt="CARDONE logo"/>
 
                 <h3>درخواست جلسه دمو</h3>

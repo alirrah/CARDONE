@@ -1,0 +1,126 @@
+@use "./../../../styles/mixin" as *;
+
+section.business-step {
+  @include flex($direction: column, $align: center, $justify: center);
+  background-color: white;
+  padding: 3rem 0;
+
+  div {
+
+    &.container {
+      inline-size: min(95%, 102.4rem);
+      @include flex($direction: column, $align: center, $justify: center, $gap: 3rem);
+    }
+
+    &.title {
+      @include flex($direction: column, $gap: 2.8rem);
+      inline-size: 100%;
+
+      h3{
+        font-size: 2.4rem;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      p {
+        font-size: 1.6rem;
+        text-align: justify;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    &.card {
+      @include flex($gap: 5rem);
+      overflow: auto;
+      width: 100%;
+      position: relative;
+      padding: 0.5rem 0.5rem 0 0;
+
+      & > div {
+        @include flex($direction: column, $align: flex-start, $gap: 2rem);
+        min-inline-size: 20rem;
+
+        &.line {
+          position: absolute;
+          inset-inline-start: 0.5rem;
+          inset-inline-end: 0;
+          inset-block-start: 1.8rem;
+          block-size: 0.1rem;
+          background-color: #EEEEF0;
+        }
+        &.active {
+          & > p {
+            background-color: #1D39BB;
+            color: white;
+            border: 0.1rem solid white;
+            box-shadow: 0 0 0 0.4rem rgba(99, 102, 241, 0.2);
+          }
+
+          div p:first-child{
+            color: #1D39BB;
+          }
+        }
+
+        & > p {
+          border: 0.1rem solid #EEEEF0;
+          background-color: white;
+          border-radius: 50%;
+          block-size: 2.8rem;
+          inline-size: 2.8rem;
+          text-align: center;
+          padding: 0.6rem 0 0 0;
+          font-size: 1.2rem;
+          font-weight: bold;
+          z-index: 1;
+        }
+
+        div {
+          @include flex($direction: column, $gap: 0.3rem);
+
+          p {
+            &.card-tittle {
+              font-size: 1.6rem;
+              font-weight: bold;
+            }
+
+            &.card-sub-tittle {
+              font-size: 1.4rem;
+              text-align: justify;
+              line-height: 2.4rem;
+            }
+          }
+        }
+      }
+    }
+
+    &.buttons {
+      @include flex($align: center, $justify: flex-end, $gap: 3.2rem);
+      inline-size: 100%;
+
+      a, button {
+        font-size: 1.4rem;
+        color: #364152;
+        padding: 1.1rem 2.2rem;
+        border-radius: 3.2rem;
+        background-color: transparent;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 1.2rem;
+        }
+
+        &:first-child {
+          border: 0.1rem solid #364152;
+        }
+
+        &:last-child {
+          @include flex($align: center, $gap: 1rem);
+        }
+      }
+    }
+  }
+}
