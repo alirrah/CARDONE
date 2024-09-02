@@ -40,8 +40,13 @@ section.business-step {
       width: 100%;
       position: relative;
       padding: 0.5rem 0.5rem 0 0;
+      scrollbar-width: none;
 
-      & > div {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+        & > div {
         @include flex($direction: column, $align: flex-start, $gap: 2rem);
         min-inline-size: 20rem;
 
@@ -52,6 +57,10 @@ section.business-step {
           inset-block-start: 1.8rem;
           block-size: 0.1rem;
           background-color: #EEEEF0;
+
+          @media only screen and (max-width: 600px) {
+            display: none;
+          }
         }
         &.active {
           & > p {

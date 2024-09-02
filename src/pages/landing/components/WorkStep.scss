@@ -1,0 +1,195 @@
+@use "./../../../styles/mixin" as *;
+@use "./../../../styles/variables" as *;
+
+section.work-step {
+  @include flex($direction: column, $justify: center, $align: center);
+  padding: 3rem 0;
+
+  div.container {
+    inline-size: min(95%, 102.4rem);
+    @include flex($direction: column, $gap: 5rem);
+
+    div {
+      &.title {
+        @include flex($direction: column, $gap: 0.8rem);
+
+        h3 {
+          font-family: $cunia;
+          font-size: 1.4rem;
+          color: #0D1A55;
+
+          @media only screen and (max-width: 600px) {
+            font-size: 1rem;
+          }
+        }
+
+        p {
+          font-weight: bold;
+          font-size: 2.4rem;
+          color: #0D0A19;
+
+          @media only screen and (max-width: 600px) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+
+      &.body {
+        @include flex($gap: 2rem);
+
+        & > div {
+          &:first-child {
+            flex: 4;
+            min-inline-size: 37rem;
+
+            @include flex($direction: column, $gap: 3.2rem);
+
+            & > div {
+              @include flex($align: center, $gap: 1.6rem);
+              padding: 1.2rem 1.6rem;
+              border-radius: 1.2rem;
+
+              &.active {
+                align-items: flex-start;
+                background-color: #0D1A55;
+                position: relative;
+                z-index: 1;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  left: -5%;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  border-top: 25px solid transparent;
+                  border-right: 50px solid #0D1A55;
+                  border-bottom: 25px solid transparent;
+                  z-index: -1;
+
+                  @media only screen and (max-width: 600px) {
+                    border-left: 25px solid transparent;
+                    border-right: 25px solid transparent;
+                    border-top: 50px solid #0D1A55;
+                    bottom: -5%;
+                    left: 1%;
+                    top: auto;
+                    transform: translateY(50%);
+                  }
+                }
+
+                .image {
+                  border: 0.1rem solid white;
+                  background-color: rgba(225, 225, 255, 0.17);
+
+                  svg {
+                    stroke: white;
+                  }
+                }
+
+                div {
+
+                  p {
+                    &:first-child {
+                      color: white;
+                      font-weight: bold;
+                    }
+
+                    &:last-child {
+                      display: block;
+                    }
+                  }
+                }
+              }
+
+              div {
+                @include flex($direction: column);
+
+                p {
+                  &:first-child {
+                    font-size: 1.6rem;
+                    color: #6E778C;
+                  }
+
+                  &:last-child {
+                    display: none;
+                    text-align: justify;
+                    font-size: 1.2rem;
+                    line-height: 2.4rem;
+                    color: white
+                  }
+                }
+              }
+
+              .image {
+                @include flex($align: center, $justify: center);
+                background-color: #F2EEFE;
+                border-radius: 50%;
+                min-inline-size: 4rem;
+                min-block-size: 4rem;
+
+                svg {
+                  stroke: #0D1A55;
+                  inline-size: 2.4rem;
+                  block-size: 2.4rem;
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            flex: 6;
+
+            block-size: 40rem;
+            border-radius: 1.6rem;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          }
+        }
+
+        @media only screen and (max-width: 600px) {
+          flex-wrap: wrap;
+
+          &>div{
+            flex: inherit!important;
+            inline-size: 100%;
+
+            &:last-child {
+              block-size: 20rem;
+            }
+          }
+        }
+      }
+
+      &.buttons {
+        @include flex($align: center, $gap: 3.2rem);
+        padding: 0 3rem 0 0;
+
+        @media only screen and (max-width: 600px) {
+          padding: 0;
+          justify-content: center;
+        }
+
+        a, button {
+          font-size: 1.4rem;
+          color: #364152;
+          padding: 1.1rem 2.2rem;
+          border-radius: 3.2rem;
+          background-color: transparent;
+
+          @media only screen and (max-width: 600px) {
+            font-size: 1.2rem;
+          }
+
+          &:first-child {
+            border: 0.1rem solid #364152;
+            background-color: white;
+          }
+
+          &:last-child {
+            @include flex($align: center, $gap: 1rem);
+          }
+        }
+      }
+    }
+  }
+}
