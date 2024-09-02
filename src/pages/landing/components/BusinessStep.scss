@@ -57,10 +57,7 @@ section.business-step {
           inset-block-start: 1.8rem;
           block-size: 0.1rem;
           background-color: #EEEEF0;
-
-          @media only screen and (max-width: 600px) {
-            display: none;
-          }
+          width: max(100%, 75rem);
         }
         &.active {
           & > p {
