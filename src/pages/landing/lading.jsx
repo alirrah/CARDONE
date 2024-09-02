@@ -9,8 +9,11 @@ import Reservation from "./components/Reservation.jsx";
 import DemoRequest from "./components/DemoRequest.jsx";
 import Footer from "./components/Footer.jsx";
 import "./landing.scss";
+import {useRef} from "react";
 
 const LandingPage = () => {
+    const demoRef = useRef();
+
     return (
         <section className='landing-page'>
             <main>
@@ -26,13 +29,13 @@ const LandingPage = () => {
 
                 <WorkStep/>
 
-                <BusinessStep/>
+                <BusinessStep refrance={demoRef}/>
 
                 <Investment/>
 
-                <Reservation/>
+                <Reservation refrance={demoRef}/>
 
-                <DemoRequest/>
+                <DemoRequest refrance={demoRef}/>
             </main>
 
             <Footer/>

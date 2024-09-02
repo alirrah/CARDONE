@@ -12,16 +12,18 @@
   font-family: IRANYekanX;
   font-style: normal;
   font-weight: bold;
-  src: url('assets/font/woff/IRANYekanX-Bold.woff') format('woff'),
-  url('assets/font/woff2/IRANYekanX-Bold.woff2') format('woff2');
+  src: url('assets/font/IRANYekanXFaNum-Bold.woff') format('woff'),
+  url('assets/font/IRANYekanXFaNum-Bold.woff2') format('woff2'),
+  url('assets/font/IRANYekanXFaNum-Bold.ttf') format('font/truetype');
 }
 
 @font-face {
   font-family: IRANYekanX;
   font-style: normal;
   font-weight: normal;
-  src: url('assets/font/woff/IRANYekanX-Regular.woff') format('woff'),
-  url('assets/font/woff2/IRANYekanX-Regular.woff2') format('woff2');
+  src: url('assets/font/IRANYekanXFaNum-Regular.woff') format('woff'),
+  url('assets/font/IRANYekanXFaNum-Regular.woff2') format('woff2'),
+  url('assets/font/IRANYekanXFaNum-Regular.ttf') format('font/truetype');
 }
 
 @font-face {
