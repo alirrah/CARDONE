@@ -40,6 +40,10 @@ section.reservation {
       &:first-child {
         border: 0.1rem solid #364152;
       }
+
+      &:last-child {
+        @include flex($align: center, $gap: 1rem);
+      }
     }
   }
 }

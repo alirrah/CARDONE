@@ -26,7 +26,7 @@ const WorkStep = ({refrance}) => {
             id: 0,
             icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M20.5 11.3V7.04001C20.5 3.01001 19.56 2 15.78 2H8.22C4.44 2 3.5 3.01001 3.5 7.04001V18.3C3.5 20.96 4.96001 21.59 6.73001 19.69L6.73999 19.68C7.55999 18.81 8.80999 18.88 9.51999 19.83L10.53 21.18" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M8 7H16"   stroke="inherit"         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 7H16" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M9 11H15"   stroke="inherit"         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M18.211 14.7703L14.671 18.3103C14.531 18.4503 14.401 18.7103 14.371 18.9003L14.181 20.2503C14.111 20.7403 14.451 21.0803 14.941 21.0103L16.291 20.8203C16.481 20.7903 16.751 20.6603 16.881 20.5203L20.421 16.9803C21.031 16.3703 21.321 15.6603 20.421 14.7603C19.531 13.8703 18.821 14.1603 18.211 14.7703Z"   stroke="inherit"         stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M17.6992 15.2803C17.9992 16.3603 18.8392 17.2003 19.9192 17.5003"   stroke="inherit"         stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,7 +64,7 @@ const WorkStep = ({refrance}) => {
         {
             id: 3,
             icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M16.96 6.17004C18.96 7.56004 20.34 9.77004 20.62 12.32"   stroke="inherit"         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.96 6.17004C18.96 7.56004 20.34 9.77004 20.62 12.32" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M3.48999 12.37C3.74999 9.82997 5.10999 7.61997 7.08999 6.21997"   stroke="inherit"         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M8.19 20.9399C9.35 21.5299 10.67 21.8599 12.06 21.8599C13.4 21.8599 14.66 21.5599 15.79 21.0099"   stroke="inherit"         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M12.06 7.70001C13.5954 7.70001 14.84 6.45537 14.84 4.92001C14.84 3.38466 13.5954 2.14001 12.06 2.14001C10.5247 2.14001 9.28003 3.38466 9.28003 4.92001C9.28003 6.45537 10.5247 7.70001 12.06 7.70001Z"   stroke="inherit"         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -112,12 +112,7 @@ const WorkStep = ({refrance}) => {
                             behavior: 'smooth'
                         })
                     }}>درخواست دمو
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M14.9998 19.9201L8.47984 13.4001C7.70984 12.6301 7.70984 11.3701 8.47984 10.6001L14.9998 4.08008"
-                                stroke="inherit"         stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round"/>
-                        </svg></button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14.9998 19.9201L8.47984 13.4001C7.70984 12.6301 7.70984 11.3701 8.47984 10.6001L14.9998 4.08008" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
                 </div>
             </div>
         </section>
