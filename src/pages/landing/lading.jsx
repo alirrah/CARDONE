@@ -27,7 +27,7 @@ const LandingPage = () => {
 
                 <OurAdvantages/>
 
-                <WorkStep/>
+                <WorkStep refrance={demoRef}/>
 
                 <BusinessStep refrance={demoRef}/>
 
