@@ -18,9 +18,9 @@ const LandingPage = () => {
         <section className='landing-page'>
             <main>
                 <div>
-                    {/*<Header/>*/}
+                    <Header/>
 
-                    <Banner/>
+                    <Banner refrance={demoRef}/>
 
                     <CooperationBrand/>
                 </div>
