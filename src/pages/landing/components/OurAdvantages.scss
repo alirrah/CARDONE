@@ -9,14 +9,26 @@ section.advantage {
     inline-size: min(95%, 102.4rem);
     padding: 3rem 0;
 
+    @media only screen and (max-width: 600px) {
+      gap: 0.8rem
+    }
+
     p {
       &.title {
         font-size: 1.4rem;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 1rem;
+        }
       }
 
       &.text {
         font-size: 2.4rem;
         font-weight: bold;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 1.6rem;
+        }
       }
     }
 
@@ -36,6 +48,7 @@ section.advantage {
       & > svg {
         display: none;
         stroke: black;
+        border-radius: 0.8rem;
 
         @media only screen and (max-width: 600px) {
           display: block;
@@ -83,6 +96,11 @@ section.advantage {
           p {
             font-size: 1.6rem;
             white-space: nowrap;
+
+            @media only screen and (max-width: 600px) {
+              font-size: 1.2rem;
+              font-weight: bold;
+            }
           }
 
           &.active {

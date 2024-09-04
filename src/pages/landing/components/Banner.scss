@@ -1,0 +1,94 @@
+@use './../../../styles/mixin' as *;
+
+section.banner {
+  @include flex($justify: center);
+  padding: 5rem 0;
+  color: white;
+
+  div.container {
+    @include flex($direction: column, $align: center, $gap: 5rem);
+    inline-size: min(95%, 102.4rem);
+
+    & > div {
+      @include flex($direction: column, $align: center);
+      position: relative;
+
+      &.title {
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
+
+        h3 {
+          font-size: 2.4rem;
+        }
+
+        img {
+          position: relative;
+          inset-block-start: -2rem;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        position: absolute;
+        inset-block-start: 5rem;
+        font-size: 2.4rem;
+        font-weight: bold;
+
+        @media only screen and (max-width: 1024px) {
+          inset-block-start: 4rem;
+          font-size: 1.6rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+          inset-block-start: 2rem;
+          font-size: 0.8rem;
+        }
+      }
+
+      div {
+        position: absolute;
+        inset-block-start: 58%;
+
+        @media only screen and (max-width: 1024px) {
+          inset-block-start: 55%;
+        }
+
+
+        &.buttons {
+          @include flex($align: center, $gap: 1rem);
+          padding: 0 3rem 0 0;
+
+          @media only screen and (max-width: 600px) {
+            display: none;
+          }
+
+          a, button {
+            font-size: 1.4rem;
+            padding: 1.1rem 2.2rem;
+            border-radius: 3.2rem;
+            background-color: transparent;
+
+            @media only screen and (max-width: 600px) {
+              font-size: 1.2rem;
+            }
+
+            &:first-child {
+              border: 0.1rem solid #364152;
+              background-color: white;
+            }
+
+            &:last-child {
+              @include flex($align: center, $gap: 0.5rem);
+              color: white;
+              stroke: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

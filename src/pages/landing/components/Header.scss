@@ -1,4 +1,5 @@
 @use './../../../styles/mixin' as *;
+@use "./../../../styles/variables" as *;
 
 header {
   @include flex($align: center, $justify: center);
@@ -9,23 +10,51 @@ header {
 
     padding-block-start: 2.4rem;
 
+    button.menu {
+      display: none;
+      padding: 0.6rem 1.2rem;
+
+      @media only screen and (max-width: 600px) {
+        background-color: transparent;
+        display: block;
+      }
+    }
+
     div {
       @include flex($align: center, $gap: 1.6rem);
+
+      @media only screen and (max-width: 600px) {
+        flex-direction: row-reverse;
+      }
 
       img {
         inline-size: 3.2rem;
         block-size: 3.2rem;
+
+        @media only screen and (max-width: 600px) {
+          inline-size: 1.6rem;
+          block-size: 1.6rem;
+        }
       }
 
       p {
+        font-family: $cunia;
         font-size: 2rem;
         font-weight: bold;
         color: white;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 1.2rem;
+        }
       }
     }
 
     ul {
       @include flex($gap: 4.8rem);
+
+      @media only screen and (max-width: 790px) {
+        display: none;
+      }
 
       li a {
         @include flex($align: center, $justify: center, $gap: 0.2rem);
@@ -85,16 +114,27 @@ header {
 
     .login-btn {
       @include flex($align: center, $justify: center, $gap: 0.8rem);
+      background-color: #364152;
 
       padding: 1.2rem 2.4rem;
 
       border: 0.1rem solid white;
       border-radius: 11rem;
 
+      @media only screen and (max-width: 600px) {
+        border: none;
+        background-color: transparent;
+        padding: 0.6rem 1.2rem;
+      }
+
       p {
         font-weight: bold;
         font-size: 1.2rem;
         color: white;
+
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
 
       }
 
