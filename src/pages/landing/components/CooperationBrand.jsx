@@ -1,4 +1,4 @@
-import cardoneLogo from "./../../../assets/image/cardone-white.png";
+import cardoneLogo from "./../../../assets/image/cardone-white.svg";
 import "./CooperationBrand.scss";
 const CooperationBrand = () => {
 

@@ -7,6 +7,7 @@ import CustomerPage from "./pages/customer/customer.jsx";
 import NewCustomerPage from "./pages/new-customer/new-customer.jsx";
 import CarPage from "./pages/car/car.jsx";
 import NewCarPage from "./pages/new-car/new-car.jsx";
+import ShopPage from "./pages/shop/shop.jsx";
 import ProfilePage from "./pages/profile/profile.jsx";
 import Url from "./assets/fake-data/url.jsx";
 
@@ -22,6 +23,7 @@ const Router = () => {
                     <Route path={`${Url}/dashboard/customer/new`} element={<NewCustomerPage/>}/>
                     <Route path={`${Url}/dashboard/car`} element={<CarPage/>}/>
                     <Route path={`${Url}/dashboard/car/new`} element={<NewCarPage/>}/>
+                    <Route path={`${Url}/dashboard/shop`} element={<ShopPage/>}/>
                     <Route path={`${Url}/dashboard/profile`} element={<ProfilePage/>}/>
                     <Route path="*" element={<NotFoundPage/>}/>
                 </Route>

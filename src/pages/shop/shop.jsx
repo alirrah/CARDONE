@@ -1,6 +1,6 @@
 import SideBar from "../../components/side-bar/side-bar.jsx";
 
-    const CustomerPage = () => {
+const ShopPage = () => {
     return (
         <main>
           <SideBar></SideBar>
@@ -8,4 +8,4 @@ import SideBar from "../../components/side-bar/side-bar.jsx";
       );
 }
 
-export default CustomerPage;
+export default ShopPage;

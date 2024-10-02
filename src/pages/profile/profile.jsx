@@ -1,5 +1,11 @@
+import SideBar from "../../components/side-bar/side-bar.jsx";
+
 const ProfilePage = () => {
-    return (<>Profile</>);
-}
+  return (
+    <main>
+      <SideBar></SideBar>
+    </main>
+  );
+};
 
 export default ProfilePage;

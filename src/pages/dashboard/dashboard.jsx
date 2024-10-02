@@ -1,8 +1,6 @@
 import {useNavigate} from "react-router-dom";
 import {useEffect} from "react";
-import TopBar from "./components/top-bar/top-bar.jsx";
-import ChatBox from "./components/chat-box/chat-box.jsx";
-import Url from "../../assets/fake-data/url.jsx";
+import SideBar from "../../components/side-bar/side-bar.jsx";
 import './dashborad.scss';
 
 const DashboardPage = () => {
@@ -21,8 +19,7 @@ const DashboardPage = () => {
 
     return (
         <main className='dashboard'>
-            <TopBar/>
-            <ChatBox/>
+            <SideBar/>
         </main>
     );
 }
