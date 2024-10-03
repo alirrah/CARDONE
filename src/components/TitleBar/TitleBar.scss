@@ -1,0 +1,50 @@
+@use "./../../styles/mixin" as *;
+@use "./../../styles/variables" as *;
+  .title-bar {
+    width: 100%;
+    padding-top: 48px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    background-color: #f4f7fedd;
+
+  .breadcrumb {
+    color: #A9A9A9;
+    font-size: 14px;
+    font-family: $font-bold;
+    font-weight: 600;
+  }
+
+  .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        color: black;
+        font-size: 24px;
+        font-family: $font-bold;
+        font-weight: 600;
+    }
+
+    .action-button {
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: black;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      font-family: $font-bold;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 50rem) {
+  .title-bar{
+    padding: 20px;
+    padding-top: 32px;
+    position: fixed;
+  }
+}

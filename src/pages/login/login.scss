@@ -27,7 +27,7 @@
 
   .icon-box{
     @include flex($justify: center, $align: center);
-    height: 100%;
+    height: 100vh;
     background: url("../../assets/image/login-bg.png") no-repeat center;
     border-bottom-right-radius: 20svh;
 

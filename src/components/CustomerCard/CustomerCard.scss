@@ -1,0 +1,67 @@
+@use "./../../styles/mixin" as *;
+@use "./../../styles/variables" as *;
+
+.customer-card {
+  width: 100%;
+  background: #e8e9eb;
+  border-radius: 12px;
+  padding: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .customer-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+    color: white;
+    font-family: $font-bold;
+    background: #0D0A19;
+    
+    background: linear-gradient(135deg, #0D0A19 0%, #0D1A55 100%);
+    margin-bottom: 0.8rem;
+  }
+  .customer-name {
+    color: black;
+    font-size: 16px;
+    font-family: $font-bold;
+    max-width: 134px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
+@media (max-width: 70rem) {
+  .customer-card {
+    .customer-name {
+      max-width: calc(20vw - 5.6rem);
+    }
+  }
+}
+@media (max-width: 50rem) {
+  .customer-card {
+    .customer-name {
+      max-width: calc(25vw - 5.6rem);
+    }
+  }
+}
+@media (max-width: 35rem) {
+  .customer-card {
+    .customer-name {
+      max-width: calc(33vw - 5.6rem);
+    }
+  }
+}
+@media (max-width: 24rem) {
+  .customer-card {
+    .customer-name {
+      max-width: calc(50vw - 5.6rem);
+    }
+  }
+}

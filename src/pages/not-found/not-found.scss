@@ -1,0 +1,39 @@
+
+@use "./../../styles/mixin" as *;
+@use "./../../styles/variables" as *;
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f8f9fa;
+
+  .not-found-title {
+    font-size: 8rem;
+    font-weight: bold;
+    color: #343a40;
+    font-family: $font-bold;
+  }
+
+  .not-found-message {
+    font-size: 2.4rem;
+    color: #6c757d;
+    font-family: $font-bold;
+  }
+
+  .not-found-link {
+    font-size: 1.6rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: $font-bold;
+
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  }
+}
