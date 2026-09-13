@@ -1,6 +1,6 @@
 import Url from "../../../assets/fake-data/url.jsx";
 import {Link} from "react-router-dom";
-import WhiteCardone from './../../../assets/image/cardone-white.png';
+import WhiteCardone from './../../../assets/image/cardone-white.svg';
 import './Header.scss';
 
 const Header = () => {

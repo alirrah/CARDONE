@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import {Robot, CarFront, PersonAdd} from "react-bootstrap-icons";
-import Url from "../../../../assets/fake-data/url.jsx";
+import Url from "../../assets/fake-data/url.jsx";
 import Image from "../../../../assets/image/empty-logo.webp";
 import "./top-bar.scss";
 

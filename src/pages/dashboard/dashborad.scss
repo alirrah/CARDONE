@@ -2,9 +2,149 @@
 @use "./../../styles/variables" as *;
 
 main.dashboard {
-  @include flex($direction: column, $gap: 1.2rem);
+  @include flex($direction: row, $gap: 1rem);
 
-  block-size: 100vh;
+  
 
-  background-color: $white;
+  background-color: #F4F7FE;
+
+    .content {
+      width: 80rem;
+      padding: 4.8rem 0;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 0 auto;
+  
+      .stats {
+        width: 80rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+  
+        .stat-card {
+          width: 38rem;
+          max-width: 50% - 2;
+          height: 11rem;
+          position: relative;
+          margin-bottom: 16px;
+  
+          .card-content {
+            width: calc(100% - 2rem);
+            height: 10rem;
+            left: 2rem;
+            top: 1rem;
+            position: absolute;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+  
+            .card-title {
+              color: #E1E1E1;
+              font-size: 16px;
+              font-family: $font-bold;
+              font-weight: 600;
+            }
+  
+            .card-value {
+              position: absolute;
+              left: calc(50% - 2rem);
+              top: 47px;
+              color: #E1E1E1;
+              font-size: 36px;
+              font-family: $font-bold;
+              font-weight: 600;
+            }
+  
+            .vector {
+              width: 9rem;
+              height: 78.75px;
+              left: calc(50% - 3rem);
+              top: 37px;
+              position: absolute;
+              transform: rotate(20deg);
+              transform-origin: 0 0;
+
+              svg{
+                path{
+                  fill: rgba(225, 225, 225, 0.20);
+
+                }
+              }
+            }
+          }
+  
+          .icon-wrapper {
+            width: 5rem;
+            height: 5rem;
+            left: 0;
+            top: 0;
+            position: absolute;
+            border-radius: 12px;
+            overflow: hidden;
+            backdrop-filter: blur(4px);
+            filter:  drop-shadow(rem rem 1rem rgba(0, 0, 0, 0.25));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            svg{
+              width: 24px;
+              path{
+                fill: #ffffff;
+              }
+            }
+          }
+  
+          &.vehicles {
+            .card-content { background: #4D3FCC; }
+            .icon-wrapper { background: rgba(77, 63, 204, 0.65); }
+          }
+  
+          &.customers {
+            .card-content { background: #3613CC; }
+            .icon-wrapper { background: rgba(54, 19, 204, 0.65); }
+          }
+  
+          &.requests {
+            .card-content { background: #6327E1; }
+            .icon-wrapper { background: rgba(99, 39, 225, 0.65); }
+          }
+  
+          &.messages {
+            .card-content { background: #5E4ACC; }
+            .icon-wrapper { background: rgba(94, 74, 204, 0.65); }
+          }
+        }
+      }
+    
+  }
+  
+}
+
+@media (max-width: 70rem) {
+  main.dashboard{
+    .content {
+      padding: 0 2rem;
+      width: 100%;
+      .stats {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 50rem) {
+  main.dashboard {
+    .content {
+      padding-top: 12.2rem;
+      padding-bottom: 8rem;
+      height: fit-content;
+    }
+  }
 }

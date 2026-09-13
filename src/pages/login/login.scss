@@ -1,106 +1,261 @@
 @use "../../styles/mixin" as *;
 @use "../../styles/variables" as *;
 
-main.login {
-  @include flex($direction: column, $justify: center, $align: center, $gap: 3rem);
 
-  block-size: 100vh;
+.login {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+  min-height: 100vh;
+  background: white;
+  overflow: hidden;
+  font-family: $font-bold;
 
-  background-color: $milky;
-
-  img {
-    block-size: 14rem;
+  @media only screen and (max-width: 810px) {
+    flex-direction: column;
   }
 
-  div.box {
-    @include flex($direction: column, $justify: center, $align: center, $gap: 1.2rem);
+  > div{
+    width: 50%;
 
-    inline-size: min(90%, 30rem);
+    @media only screen and (max-width: 810px) {
+      width: 100%;
+    }
+  }
 
-    background-color: $white;
+  .icon-box{
+    @include flex($justify: center, $align: center);
+    height: 100vh;
+    background: url("../../assets/image/login-bg.png") no-repeat center;
+    border-bottom-right-radius: 20svh;
 
-    padding: 1.2rem;
-
-    border-radius: 1.2rem;
-    border: 0.1rem solid $light-grey;
-
-    h3 {
-      font-size: 1.8rem;
+    @media only screen and (max-width: 810px) {
+      height: 32rem;
+      border-bottom-right-radius: 15svh;
     }
 
-    form {
-      @include flex($direction: column, $gap: 3.2rem);
+    a{
+      @include flex($direction: column, $justify: center, $align: center, $gap: 4.8rem);
+      padding: 4rem;
 
-      inline-size: 100%;
-
-      font-size: 1.2rem;
-
-      div {
-        @include flex($direction: column, $gap: 0.8rem);
-
-        &.password-box {
-          @include flex();
-
-          position: relative;
-
-          button {
-            @include flex($align: center);
-
-            block-size: 100%;
-
-            background-color: transparent;
-
-            font-size: 1.8rem;
-            color: $grey;
-
-            position: absolute;
-            inset-block-start: 50%;
-            inset-inline-end: 0;
-
-            transform: translate(50%, -50%);
-          }
-        }
+      @media only screen and (max-width: 810px) {
+        gap: 2.2rem;
       }
+    }
+
+    p{
+      font-size: 3.2rem;
+      font-family: $font-bold;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .logo-link img {
+    height: 15rem;
+  }
+
+  .box {
+    width: 41rem;
+    padding: 1.2rem 2rem;
+    background: white;
+    border-radius: 16px;
+    margin: auto;
+
+    @media only screen and (max-width: 810px) {
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #2B3674;
+      font-family: $font-bold;
+    }
+
+    p{
+      color: $grey;
+      font-size: 1.6rem;
+      margin-bottom: 3.6rem;
+
+      @media only screen and (max-width: 810px) {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    .form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
 
       label {
-        color: $grey;
+        font-size: 14px;
+        font-weight: 500;
+        color: #2B3674;
+        font-family: $font-bold;
+
+        span{
+
+        }
       }
 
       input {
-        @include flex($align: center, $justify: center);
+        @include flex($direction: row, $justify: space-between, $align: center);
+        width: 100%;
+        height: 48px;
+        padding: 0 2.4rem;
+        border: 1px solid #E0E5F2;
+        border-radius: 16px;
+        font-size: 14px;
+        direction: ltr;
 
-        inline-size: 100%;
+        @media only screen and (max-width: 810px) {
+          height: 3.6rem;
+          border-radius: 1.2rem;
+        }
 
-        background-color: $grey-alpha-one;
+        &::placeholder {
+          color: #A3AED0;
+        }
+      }
+    }
 
-        border-radius: 1.2rem;
+    .password-box {
+      position: relative;
 
-        padding: 0.8rem 1.6rem;
+      .password-toggle {
+        position: absolute;
+        right: 1.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #A3AED0;
+        width: 2rem;
+        height: 2rem;
+
+        svg{
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+
+    .form-actions {
+      margin-top: 1.5rem;
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 14px;
+        color: #2B3674;
       }
 
-      button[type='submit'] {
-        @include flex($align: center, $justify: center, $gap: 1rem);
+      .forgot-password {
+        font-size: 14px;
+        color: #4318FF;
+        text-decoration: none;
+        font-family: $font-bold;
+      }
+    }
 
-        inline-size: 100%;
+    .submit-btn {
+      width: 100%;
+      height: 52px;
+      background: #4318FF;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: $font-bold;
 
-        background-color: $blue;
-
-        border: 0;
+      @media only screen and (max-width: 810px) {
+        height: 3.6rem;
         border-radius: 1.2rem;
+      }
+    }
 
-        padding: 0.8rem 1.6rem;
+    .separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 1.5rem 0;
 
-        color: $white;
+      &::before,
+      &::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #E0E5F2;
+      }
 
-        svg {
-          font-size: 1.8rem;
+      span {
+        padding: 0 10px;
+        color: #A3AED0;
+        font-size: 14px;
+      }
+    }
 
-          animation: spin 2s linear infinite;
-        }
+    .google-login {
+      width: 100%;
+      height: 48px;
+      background: #F4F7FE;
+      border: none;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 14px;
+      color: #2B3674;
+      cursor: pointer;
+      font-family: $font-bold;
+
+      @media only screen and (max-width: 810px) {
+        height: 3.6rem;
+        border-radius: 1.2rem;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .signup-link {
+      margin: 1.2rem 0;
+      text-align: center;
+      font-family: $font-bold;
+      font-size: 14px;
+      color: #2B3674;
+
+      a {
+        color: #4318FF;
+        text-decoration: none;
+        font-family: $font-bold;
+        font-weight: 700;
       }
     }
   }
 }
+
 
 @keyframes spin {
   to {

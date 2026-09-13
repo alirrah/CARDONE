@@ -1,0 +1,41 @@
+@use "./../../styles/mixin" as *;
+@use "./../../styles/variables" as *;
+
+main.car {
+  @include flex($direction: row, $gap: 1rem);
+  
+  background-color: #f4f7fe;
+
+  .content {
+    width: 80rem;
+    padding: 4.8rem 0;
+      padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 auto;
+  }
+  .car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 70rem) {
+  main.car {
+    .content {
+      padding: 0 2rem;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 50rem) {
+  main.car {
+    .content {
+      padding-top: 12.2rem;
+      padding-bottom: 8rem;
+      height: fit-content;
+    }
+  }
+}
